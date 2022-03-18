@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/Experience.css";
 
 class Experience extends Component {
   constructor(props) {
@@ -8,11 +7,7 @@ class Experience extends Component {
   render() {
     return (
       <div className="container-experience">
-        <h1>
-          {" "}
-          Education asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd asdasdasd
-          asdasdasd asdasdad asdasdasd asdasdasd{" "}
-        </h1>
+        <h2> Experience</h2>
       </div>
     );
   }

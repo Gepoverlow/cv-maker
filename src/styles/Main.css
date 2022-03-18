@@ -1,0 +1,27 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.container-name {
+  background-color: #e4dee4;
+  padding: 10px;
+
+  font-size: 20px;
+  border-bottom: 2px solid black;
+}
+
+.container-education {
+  background-color: #af9fa5;
+  padding: 10px;
+
+  border-bottom: 1px solid black;
+}
+
+.container-experience {
+  background-color: #92898a;
+  padding: 10px;
+
+  border-bottom: 1px solid black;
+}
