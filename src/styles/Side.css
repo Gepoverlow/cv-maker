@@ -17,9 +17,15 @@
 }
 
 .info-picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-picture {
   height: 200px;
   width: 200px;
-  align-self: center;
   border-radius: 50%;
   margin-bottom: 10px;
 }

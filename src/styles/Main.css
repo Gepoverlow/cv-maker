@@ -25,3 +25,13 @@
 
   border-bottom: 1px solid black;
 }
+
+.container-degree {
+  display: flex;
+
+  margin-top: 10px;
+}
+
+.degree-date {
+  margin-right: 45px;
+}

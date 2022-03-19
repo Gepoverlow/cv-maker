@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ProfilePicture from "../styles/profilepic.jpeg";
 
 class InfoDetails extends Component {
   constructor(props) {
@@ -9,11 +8,12 @@ class InfoDetails extends Component {
   render() {
     return (
       <div className="info-details">
-        <img className="info-picture" src={ProfilePicture}></img>
         <h4 className="info-intro">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum beatae
           reprehenderit error non ipsa reiciendis distinctio, ratione optio
-          ipsam incidunt eos corporis doloribus"
+          ipsam incidunt eos corporis doloribus"asdasdasd adsasdasdasdasd
+          asdasdasd adasdasdasdasd asdasdasdasdasd asdasdasdasdasd
+          asdasdasdasdasd
         </h4>
       </div>
     );
