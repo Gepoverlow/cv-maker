@@ -8,7 +8,7 @@ class Education extends Component {
   render() {
     return (
       <div className="container-education">
-        <h2>Education</h2>
+        <h1>Education</h1>
         <Degree
           date="2013"
           title="Title One"
