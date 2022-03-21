@@ -8,24 +8,10 @@ class Education extends Component {
     super(props);
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleAddDegree = this.handleAddDegree.bind(this);
     this.state = {
       isHovering: false,
-      degrees: [
-        {
-          date: 2013,
-          title: "Title One",
-          specification: "Specification One",
-          place: "Place One",
-          id: uniqid(),
-        },
-        {
-          date: 2019,
-          title: "Title Two",
-          specification: "Specification Two",
-          place: "Place Two",
-          id: uniqid(),
-        },
-      ],
+      degrees: [],
     };
   }
 
@@ -41,6 +27,18 @@ class Education extends Component {
     }));
   }
 
+  handleAddDegree() {
+    this.setState(() => ({
+      degrees: this.state.degrees.concat({
+        date: "Date",
+        title: "Title",
+        specification: "Specification",
+        place: "Place Of Study",
+        id: uniqid(),
+      }),
+    }));
+  }
+
   render() {
     return (
       <div className="container-education">
@@ -50,7 +48,9 @@ class Education extends Component {
           className="education-title"
         >
           <h1 className="education-title-header">Education</h1>
-          {this.state.isHovering && <EditingTools />}
+          {this.state.isHovering && (
+            <EditingTools handleAdd={this.handleAddDegree} />
+          )}
         </div>
         {this.state.degrees.map((degree) => {
           return (

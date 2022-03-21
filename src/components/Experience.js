@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import Work from "./Work";
 import EditingTools from "./EditingTools";
+import uniqid from "uniqid";
 
 class Experience extends Component {
   constructor(props) {
     super(props);
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleAddWork = this.handleAddWork.bind(this);
     this.state = {
       isHovering: false,
+      works: [],
     };
   }
 
@@ -24,6 +27,20 @@ class Experience extends Component {
     }));
   }
 
+  handleAddWork() {
+    this.setState(() => ({
+      works: this.state.works.concat({
+        company: "Company",
+        role: "Role",
+        dateFrom: "From",
+        dateTo: "To",
+        details:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!",
+        id: uniqid(),
+      }),
+    }));
+  }
+
   render() {
     return (
       <div className="container-experience">
@@ -33,44 +50,22 @@ class Experience extends Component {
           className="experience-title"
         >
           <h1 className="experience-title-header">Experience</h1>
-          {this.state.isHovering && <EditingTools />}
+          {this.state.isHovering && (
+            <EditingTools handleAdd={this.handleAddWork} />
+          )}
         </div>
-
-        <Work
-          company="Company One"
-          role="Role One"
-          dateFrom="2010"
-          dateTo="2012"
-          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!"
-        />
-        <Work
-          company="Company Two"
-          role="Role Two"
-          dateFrom="2013"
-          dateTo="2016"
-          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!"
-        />
-        <Work
-          company="Company Three"
-          role="Role Three"
-          dateFrom="2016"
-          dateTo="2019"
-          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!"
-        />
-        <Work
-          company="Company Four"
-          role="Role Four"
-          dateFrom="2020"
-          dateTo="2021"
-          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!"
-        />
-        <Work
-          company="Company Five"
-          role="Role Five"
-          dateFrom="2021"
-          dateTo="Current"
-          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium expedita blanditiis a placeat cumque adipisci molestias reiciendis, quod alias. Rem, ullam rerum. Eum quod dolore nulla voluptas quis facilis!"
-        />
+        {this.state.works.map((work) => {
+          return (
+            <Work
+              key={work.id}
+              company={work.company}
+              role={work.role}
+              dateFrom={work.dateFrom}
+              dateTo={work.dateTo}
+              details={work.details}
+            />
+          );
+        })}
       </div>
     );
   }

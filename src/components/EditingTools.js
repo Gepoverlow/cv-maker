@@ -8,7 +8,12 @@ class EditingTools extends Component {
   render() {
     return (
       <div className="tools-container">
-        <span className="material-icons-outlined">add_circle_outline</span>
+        <span
+          className="material-icons-outlined"
+          onClick={this.props.handleAdd}
+        >
+          add_circle_outline
+        </span>
         <span className="material-icons-outlined">mode_edit</span>
         <span className="material-icons-outlined">check</span>
       </div>
