@@ -13,17 +13,25 @@
 }
 
 .container-education {
-  background-color: #af9fa5;
+  background-color: #e4dee4;
   padding: 10px;
 
   border-bottom: 2px solid black;
 }
 
-.container-experience {
-  background-color: #92898a;
+.container-education > h1 {
   padding: 10px;
+  background-color: grey;
+}
 
-  /* border-bottom: 2px solid black; */
+.container-experience {
+  background-color: #e4dee4;
+  padding: 10px;
+}
+
+.container-experience > h1 {
+  padding: 10px;
+  background-color: grey;
 }
 
 .container-degree {

@@ -8,16 +8,16 @@ class Work extends Component {
     return (
       <div className="container-work">
         <div className="work-company">
-          <h2>{this.props.company}</h2>
+          <h3>{this.props.company}</h3>
         </div>
         <div className="work-role-date">
-          <h3>{this.props.role}</h3>
+          <h4>{this.props.role}</h4>
           <div className="work-date">
-            <h3>{this.props.dateFrom}</h3> - <h3>{this.props.dateTo}</h3>
+            <h4>{this.props.dateFrom}</h4> - <h4>{this.props.dateTo}</h4>
           </div>
         </div>
         <div className="work-detals">
-          <h4>{this.props.details}</h4>
+          <p>{this.props.details}</p>
         </div>
       </div>
     );
