@@ -71,6 +71,11 @@
   flex-direction: row;
 }
 
+.work-date-edit {
+  display: flex;
+  flex-direction: column;
+}
+
 .work-company > h2,
 .work-role-date > h3 {
   margin-bottom: 10px;

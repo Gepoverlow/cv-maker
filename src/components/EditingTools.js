@@ -14,8 +14,18 @@ class EditingTools extends Component {
         >
           add_circle_outline
         </span>
-        <span className="material-icons-outlined">mode_edit</span>
-        <span className="material-icons-outlined">check</span>
+        <span
+          className="material-icons-outlined"
+          onClick={this.props.handleEdit}
+        >
+          mode_edit
+        </span>
+        <span
+          className="material-icons-outlined"
+          onClick={this.props.handleConfirm}
+        >
+          check
+        </span>
       </div>
     );
   }
