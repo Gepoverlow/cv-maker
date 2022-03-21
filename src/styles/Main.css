@@ -19,19 +19,26 @@
   border-bottom: 2px solid black;
 }
 
-.container-education > h1 {
+.education-title,
+.experience-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   background-color: grey;
+  cursor: pointer;
+}
+
+.tools-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-right: 10px;
 }
 
 .container-experience {
   background-color: #e4dee4;
   padding: 10px;
-}
-
-.container-experience > h1 {
-  padding: 10px;
-  background-color: grey;
 }
 
 .container-degree {

@@ -1,14 +1,39 @@
 import React, { Component } from "react";
 import Work from "./Work";
+import EditingTools from "./EditingTools";
 
 class Experience extends Component {
   constructor(props) {
     super(props);
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.state = {
+      isHovering: false,
+    };
+  }
+  handleMouseOver() {
+    this.setState(() => ({
+      isHovering: true,
+    }));
+  }
+
+  handleMouseOut() {
+    this.setState(() => ({
+      isHovering: false,
+    }));
   }
   render() {
     return (
       <div className="container-experience">
-        <h1> Experience</h1>
+        <div
+          onMouseOver={this.handleMouseOver}
+          onMouseOut={this.handleMouseOut}
+          className="experience-title"
+        >
+          <h1 className="experience-title-header">Experience</h1>
+          {this.state.isHovering && <EditingTools />}
+        </div>
+
         <Work
           company="Company One"
           role="Role One"
