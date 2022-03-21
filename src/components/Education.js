@@ -40,6 +40,7 @@ class Education extends Component {
       isHovering: false,
     }));
   }
+
   render() {
     return (
       <div className="container-education">

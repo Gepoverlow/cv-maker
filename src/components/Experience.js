@@ -11,6 +11,7 @@ class Experience extends Component {
       isHovering: false,
     };
   }
+
   handleMouseOver() {
     this.setState(() => ({
       isHovering: true,
@@ -22,6 +23,7 @@ class Experience extends Component {
       isHovering: false,
     }));
   }
+
   render() {
     return (
       <div className="container-experience">
