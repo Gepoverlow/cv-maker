@@ -9,7 +9,7 @@ class EditDegree extends Component {
       <div className="container-degree">
         <div className="degree-date">
           <input
-            onChange={this.props.handleChange}
+            onChange={this.props.handleChangeDate}
             defaultValue={this.props.dateEdit}
           ></input>
           <span
@@ -21,15 +21,15 @@ class EditDegree extends Component {
         </div>
         <div className="degree-details">
           <input
-            onChange={this.props.handleChange}
+            onChange={this.props.handleChangeTitle}
             defaultValue={this.props.titleEdit}
           ></input>
           <input
-            onChange={this.props.handleChange}
+            onChange={this.props.handleChangeSpecification}
             defaultValue={this.props.specificationEdit}
           ></input>
           <input
-            onChange={this.props.handleChange}
+            onChange={this.props.handleChangePlace}
             defaultValue={this.props.placeEdit}
           ></input>
         </div>

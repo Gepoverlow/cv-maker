@@ -12,7 +12,10 @@ class Education extends Component {
     this.handleAddDegree = this.handleAddDegree.bind(this);
     this.handleEditDegree = this.handleEditDegree.bind(this);
     this.handleConfirmDegree = this.handleConfirmDegree.bind(this);
-    this.handleChangeDegree = this.handleChangeDegree.bind(this);
+    this.handleChangeDate = this.handleChangeDate.bind(this);
+    this.handleChangeTitle = this.handleChangeTitle.bind(this);
+    this.handleChangeSpecification = this.handleChangeSpecification.bind(this);
+    this.handleChangePlace = this.handleChangePlace.bind(this);
 
     this.state = {
       isEditing: false,
@@ -57,8 +60,53 @@ class Education extends Component {
     }));
   }
 
-  handleChangeDegree() {
-    console.log("this should change the array");
+  handleChangeDate(index, e) {
+    const array = [...this.state.degrees];
+    const itemIndex = array.findIndex((degree) => {
+      return degree.id === index;
+    });
+    const degree = { ...array[itemIndex] };
+    degree.date = e.target.value;
+
+    array[itemIndex] = degree;
+
+    this.setState({ degrees: array });
+  }
+  handleChangeTitle(index, e) {
+    const array = [...this.state.degrees];
+    const itemIndex = array.findIndex((degree) => {
+      return degree.id === index;
+    });
+    const degree = { ...array[itemIndex] };
+    degree.title = e.target.value;
+
+    array[itemIndex] = degree;
+
+    this.setState({ degrees: array });
+  }
+  handleChangeSpecification(index, e) {
+    const array = [...this.state.degrees];
+    const itemIndex = array.findIndex((degree) => {
+      return degree.id === index;
+    });
+    const degree = { ...array[itemIndex] };
+    degree.specification = e.target.value;
+
+    array[itemIndex] = degree;
+
+    this.setState({ degrees: array });
+  }
+  handleChangePlace(index, e) {
+    const array = [...this.state.degrees];
+    const itemIndex = array.findIndex((degree) => {
+      return degree.id === index;
+    });
+    const degree = { ...array[itemIndex] };
+    degree.place = e.target.value;
+
+    array[itemIndex] = degree;
+
+    this.setState({ degrees: array });
   }
 
   handleDeleteDegree(index) {
@@ -100,7 +148,16 @@ class Education extends Component {
                   titleEdit={degree.title}
                   specificationEdit={degree.specification}
                   placeEdit={degree.place}
-                  handleChange={this.handleChangeDegree}
+                  handleChangeDate={(e) => this.handleChangeDate(degree.id, e)}
+                  handleChangeTitle={(e) =>
+                    this.handleChangeTitle(degree.id, e)
+                  }
+                  handleChangeSpecification={(e) =>
+                    this.handleChangeSpecification(degree.id, e)
+                  }
+                  handleChangePlace={(e) =>
+                    this.handleChangePlace(degree.id, e)
+                  }
                   handleDelete={() => this.handleDeleteDegree(degree.id)}
                 />
               );
