@@ -6,7 +6,7 @@ class Degree extends Component {
   }
   render() {
     return (
-      <div className="container-degree">
+      <div data-key={this.props.id} className="container-degree">
         <div className="degree-date">
           <h4>{this.props.date}</h4>
         </div>

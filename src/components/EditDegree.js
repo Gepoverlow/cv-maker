@@ -8,12 +8,30 @@ class EditDegree extends Component {
     return (
       <div className="container-degree">
         <div className="degree-date">
-          <input value={this.props.dateEdit}></input>
+          <input
+            onChange={this.props.handleChange}
+            defaultValue={this.props.dateEdit}
+          ></input>
+          <span
+            className="material-icons-outlined"
+            onClick={this.props.handleDelete}
+          >
+            clear
+          </span>
         </div>
         <div className="degree-details">
-          <input value={this.props.titleEdit}></input>
-          <input value={this.props.specificationEdit}></input>
-          <input value={this.props.placeEdit}></input>
+          <input
+            onChange={this.props.handleChange}
+            defaultValue={this.props.titleEdit}
+          ></input>
+          <input
+            onChange={this.props.handleChange}
+            defaultValue={this.props.specificationEdit}
+          ></input>
+          <input
+            onChange={this.props.handleChange}
+            defaultValue={this.props.placeEdit}
+          ></input>
         </div>
       </div>
     );

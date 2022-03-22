@@ -48,7 +48,14 @@
 }
 
 .degree-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-right: 45px;
+}
+
+.degree-date > span {
+  cursor: pointer;
 }
 
 .container-work {

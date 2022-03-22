@@ -12,6 +12,7 @@ class Education extends Component {
     this.handleAddDegree = this.handleAddDegree.bind(this);
     this.handleEditDegree = this.handleEditDegree.bind(this);
     this.handleConfirmDegree = this.handleConfirmDegree.bind(this);
+    this.handleChangeDegree = this.handleChangeDegree.bind(this);
 
     this.state = {
       isEditing: false,
@@ -56,6 +57,22 @@ class Education extends Component {
     }));
   }
 
+  handleChangeDegree() {
+    console.log("this should change the array");
+  }
+
+  handleDeleteDegree(index) {
+    const array = [...this.state.degrees];
+    const itemIndex = array.findIndex((degree) => {
+      return degree.id === index;
+    });
+
+    if (itemIndex !== -1) {
+      array.splice(itemIndex, 1);
+      this.setState({ degrees: array });
+    }
+  }
+
   render() {
     return (
       <div className="container-education">
@@ -78,10 +95,13 @@ class Education extends Component {
               return (
                 <EditDegree
                   key={degree.id}
+                  id={degree.id}
                   dateEdit={degree.date}
                   titleEdit={degree.title}
                   specificationEdit={degree.specification}
                   placeEdit={degree.place}
+                  handleChange={this.handleChangeDegree}
+                  handleDelete={() => this.handleDeleteDegree(degree.id)}
                 />
               );
             })
