@@ -28,13 +28,6 @@ class EditContactDetails extends Component {
             defaultValue={this.props.address}
           ></input>
         </h5>
-        <h5>
-          Linkedn:
-          <input
-            onChange={this.props.handleChangeLinkedn}
-            defaultValue={this.props.linkedn}
-          ></input>
-        </h5>
       </div>
     );
   }

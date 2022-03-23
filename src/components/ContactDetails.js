@@ -19,10 +19,6 @@ class ContactDetails extends Component {
           Address:
           <p>{this.props.address}</p>
         </h5>
-        <h5>
-          Linkedn:
-          <p>{this.props.linkedn}</p>
-        </h5>
       </div>
     );
   }

@@ -13,7 +13,7 @@ class Contact extends Component {
     this.handleChangeMail = this.handleChangeMail.bind(this);
     this.handleChangePhone = this.handleChangePhone.bind(this);
     this.handleChangeAddress = this.handleChangeAddress.bind(this);
-    this.handleChangeLinkedn = this.handleChangeLinkedn.bind(this);
+
     this.state = {
       isHovering: false,
       isEditing: false,
@@ -21,7 +21,6 @@ class Contact extends Component {
         email: "Your Mail",
         phone: "Your Phone",
         address: "Your Address",
-        linkedn: " Your Linkedn",
       },
     };
   }
@@ -95,21 +94,6 @@ class Contact extends Component {
     });
   }
 
-  handleChangeLinkedn(e) {
-    const email = this.state.info.email;
-    const phone = this.state.info.phone;
-    const address = this.state.info.address;
-
-    this.setState({
-      info: {
-        email: email,
-        phone: phone,
-        address: address,
-        linkedn: e.target.value,
-      },
-    });
-  }
-
   render() {
     return (
       <div className="container-contact">
@@ -131,18 +115,15 @@ class Contact extends Component {
             email={this.state.info.email}
             phone={this.state.info.phone}
             address={this.state.info.address}
-            linkedn={this.state.info.linkedn}
             handleChangeMail={this.handleChangeMail}
             handleChangePhone={this.handleChangePhone}
             handleChangeAddress={this.handleChangeAddress}
-            handleChangeLinkedn={this.handleChangeLinkedn}
           />
         ) : (
           <ContactDetails
             email={this.state.info.email}
             phone={this.state.info.phone}
             address={this.state.info.address}
-            linkedn={this.state.info.linkedn}
           />
         )}
       </div>
