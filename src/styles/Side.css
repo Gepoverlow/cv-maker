@@ -27,20 +27,36 @@
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .info-intro {
   margin-top: 20px;
 }
 
-.info-contact {
+.container-contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 200px;
 }
 
-.info-contact > h4 > p {
+.container-contact-details {
+  margin-top: 20px;
+}
+
+.container-contact-details > h5 {
+  margin-bottom: 10px;
+}
+
+.container-contact > h4 > p {
   font-size: 13px;
+}
+
+.contact-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(163, 156, 156);
+  cursor: pointer;
 }
