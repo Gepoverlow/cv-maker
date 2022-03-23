@@ -6,39 +6,37 @@ class EditWork extends Component {
   }
   render() {
     return (
-      <div className="container-work">
-        <div className="work-company">
+      <div className="container-work-edit">
+        <div className="work-details">
           <input
+            className="company-input-edit"
             onChange={this.props.handleChangeCompany}
             defaultValue={this.props.companyEdit}
           ></input>
+          <input
+            onChange={this.props.handleChangeRole}
+            defaultValue={this.props.roleEdit}
+          ></input>
+          <input
+            className="details-input-edit"
+            onChange={this.props.handleChangeDetails}
+            defaultValue={this.props.detailsEdit}
+          ></input>
+        </div>
+        <div className="work-date-edit">
           <span
             className="material-icons-outlined"
             onClick={this.props.handleDelete}
           >
             clear
           </span>
-        </div>
-        <div className="work-role-date">
           <input
-            onChange={this.props.handleChangeRole}
-            defaultValue={this.props.roleEdit}
+            onChange={this.props.handleChangeFrom}
+            defaultValue={this.props.dateFromEdit}
           ></input>
-          <div className="work-date-edit">
-            <input
-              onChange={this.props.handleChangeFrom}
-              defaultValue={this.props.dateFromEdit}
-            ></input>
-            <input
-              onChange={this.props.handleChangeTo}
-              defaultValue={this.props.dateToEdit}
-            ></input>
-          </div>
-        </div>
-        <div className="work-detals">
           <input
-            onChange={this.props.handleChangeDetails}
-            defaultValue={this.props.detailsEdit}
+            onChange={this.props.handleChangeTo}
+            defaultValue={this.props.dateToEdit}
           ></input>
         </div>
       </div>

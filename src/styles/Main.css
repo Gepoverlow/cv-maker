@@ -38,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: grey;
+  background-color: rgb(163, 156, 156);
   cursor: pointer;
 }
 
@@ -63,26 +63,48 @@
 
 .container-degree {
   display: flex;
+  justify-content: space-between;
 
+  padding: 5px;
   margin-top: 30px;
+  background-color: rgb(214, 206, 206);
 }
 
 .degree-date {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  margin-right: 45px;
+  flex-direction: column;
+  margin-right: 20px;
 }
 
 .degree-date > span {
+  align-self: center;
   cursor: pointer;
-  width: 25px;
+}
+
+.degree-date > input {
+  align-self: center;
+}
+
+.degree-details > h4 {
+  margin-bottom: 10px;
 }
 
 .container-work {
   display: flex;
   flex-direction: column;
 
+  padding: 5px;
+  margin-top: 30px;
+  background-color: rgb(214, 206, 206);
+}
+
+.container-work-edit {
+  display: flex;
+  flex-direction: row;
+
+  padding: 5px;
+  background-color: rgb(214, 206, 206);
   margin-top: 30px;
 }
 
@@ -94,14 +116,21 @@
   margin-bottom: 10px;
 }
 
+.work-date-edit {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
 .work-date {
   display: flex;
   flex-direction: row;
 }
 
-.work-date-edit {
-  display: flex;
-  flex-direction: column;
+.work-date-edit > span {
+  cursor: pointer;
+  align-self: center;
 }
 
 .work-company {
@@ -109,11 +138,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.work-company > span {
-  cursor: pointer;
-}
 
-.work-company > h2,
-.work-role-date > h3 {
+.company-input-edit,
+.title-input-edit {
   margin-bottom: 10px;
 }
