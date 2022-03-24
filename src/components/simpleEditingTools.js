@@ -9,7 +9,7 @@ class SimpleEditingTools extends Component {
     return (
       <div
         onMouseOver={this.props.handleMouseOver}
-        onMouseOUt={this.handleMouseOver}
+        onMouseOut={this.handleMouseOver}
         className="simple-tools-container"
       >
         <span
