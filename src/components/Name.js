@@ -26,12 +26,14 @@ class Name extends Component {
     this.setState(() => ({
       isHovering: true,
     }));
+    console.log("latest version over");
   }
 
   handleMouseOut() {
     this.setState(() => ({
       isHovering: false,
     }));
+    console.log("latest version out");
   }
 
   handleEditName() {
