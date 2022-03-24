@@ -15,7 +15,13 @@ class Skills extends Component {
     this.state = {
       isEditing: false,
       isHovering: false,
-      skills: [],
+      skills: [
+        { name: "A skill", id: uniqid() },
+        { name: "Another Skill", id: uniqid() },
+        { name: "And another one", id: uniqid() },
+        { name: "Dj", id: uniqid() },
+        { name: "You know the rest", id: uniqid() },
+      ],
     };
   }
 

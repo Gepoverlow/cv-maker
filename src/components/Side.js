@@ -3,7 +3,7 @@ import "../styles/Side.css";
 import Contact from "./Contact";
 import Introduction from "./Introduction";
 import Skills from "./Skills";
-import InfoPicture from "./InfoPicture";
+import Picture from "./Picture";
 
 class Side extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Side extends Component {
   render() {
     return (
       <div className="container-side">
-        <InfoPicture />
+        <Picture />
         <Contact />
         <Introduction />
         <Skills />
