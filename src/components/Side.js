@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/Side.css";
 import Contact from "./Contact";
 import Introduction from "./Introduction";
+import Skills from "./Skills";
 import InfoPicture from "./InfoPicture";
 
 class Side extends Component {
@@ -14,6 +15,7 @@ class Side extends Component {
         <InfoPicture />
         <Contact />
         <Introduction />
+        <Skills />
       </div>
     );
   }
