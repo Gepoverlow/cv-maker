@@ -16,8 +16,8 @@ class Name extends Component {
       isHovering: false,
       isEditing: false,
       user: {
-        name: "Latestest",
-        surname: "Versionest",
+        name: "Name",
+        surname: "Surname",
       },
     };
   }
