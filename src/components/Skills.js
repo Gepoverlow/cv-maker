@@ -95,6 +95,8 @@ class Skills extends Component {
           <h3 className="skills-title-header">Skills</h3>
           {this.state.isHovering && (
             <EditingTools
+              onMouseOver={this.handleMouseOver}
+              onMouseOut={this.handleMouseOut}
               handleAdd={this.handleAddSkill}
               handleEdit={this.handleEditSkill}
               handleConfirm={this.handleConfirmSkill}

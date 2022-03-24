@@ -147,6 +147,8 @@ class Education extends Component {
           <h1 className="education-title-header">Education</h1>
           {this.state.isHovering && (
             <EditingTools
+              onMouseOver={this.handleMouseOver}
+              onMouseOut={this.handleMouseOut}
               handleAdd={this.handleAddDegree}
               handleEdit={this.handleEditDegree}
               handleConfirm={this.handleConfirmDegree}

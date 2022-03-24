@@ -96,6 +96,8 @@ class Name extends Component {
         )}
         {this.state.isHovering && (
           <SimpleEditingTools
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}
             handleEdit={this.handleEditName}
             handleConfirm={this.handleConfirmName}
           />

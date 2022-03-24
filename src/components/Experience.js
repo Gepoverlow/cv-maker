@@ -171,6 +171,8 @@ class Experience extends Component {
           <h1 className="experience-title-header">Experience</h1>
           {this.state.isHovering && (
             <EditingTools
+              onMouseOver={this.handleMouseOver}
+              onMouseOut={this.handleMouseOut}
               handleAdd={this.handleAddWork}
               handleEdit={this.handleEditWork}
               handleConfirm={this.handleConfirmWork}
