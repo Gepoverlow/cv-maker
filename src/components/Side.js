@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/Side.css";
 import Contact from "./Contact";
-import InfoDetails from "./InfoDetails";
+import Introduction from "./Introduction";
 import InfoPicture from "./InfoPicture";
 
 class Side extends Component {
@@ -13,6 +13,7 @@ class Side extends Component {
       <div className="container-side">
         <InfoPicture />
         <Contact />
+        <Introduction />
       </div>
     );
   }

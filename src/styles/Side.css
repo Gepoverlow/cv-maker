@@ -3,7 +3,7 @@
   flex-direction: column;
 
   background-color: rgb(224, 208, 208);
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   width: 35%;
 
   border-right: 2px solid black;
@@ -30,8 +30,18 @@
   margin-bottom: 20px;
 }
 
-.info-intro {
+.introduction-main-edit {
   margin-top: 20px;
+  resize: vertical;
+  word-break: break-all;
+  width: 100%;
+
+  font-size: 15px;
+}
+
+.introduction-main {
+  margin-top: 20px;
+  font-size: 15px;
 }
 
 .container-contact {
@@ -52,7 +62,8 @@
   font-size: 13px;
 }
 
-.contact-title {
+.contact-title,
+.introduction-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
