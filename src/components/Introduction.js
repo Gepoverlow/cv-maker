@@ -54,8 +54,6 @@ class Introduction extends Component {
           <h3 className="introduction-title-header">Introduction</h3>
           {this.state.isHovering && (
             <SimpleEditingTools
-              onMouseOver={this.handleMouseOver}
-              onMouseOut={this.handleMouseOut}
               handleEdit={this.handleEditIntro}
               handleConfirm={this.handleConfirmIntro}
             />

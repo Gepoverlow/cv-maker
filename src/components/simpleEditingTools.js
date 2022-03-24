@@ -7,11 +7,7 @@ class SimpleEditingTools extends Component {
 
   render() {
     return (
-      <div
-        onMouseOver={this.props.handleMouseOver}
-        onMouseOut={this.handleMouseOver}
-        className="simple-tools-container"
-      >
+      <div className="simple-tools-container">
         <span
           className="material-icons-outlined"
           onClick={this.props.handleEdit}

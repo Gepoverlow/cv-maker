@@ -105,8 +105,6 @@ class Contact extends Component {
           <h3 className="contact-title-header">Contact Info</h3>
           {this.state.isHovering && (
             <SimpleEditingTools
-              handleMouseOver={this.handleMouseOver}
-              handleMouseOut={this.handleMouseOut}
               handleEdit={this.handleEditInfo}
               handleConfirm={this.handleConfirmInfo}
             />

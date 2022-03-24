@@ -16,8 +16,8 @@ class Name extends Component {
       isHovering: false,
       isEditing: false,
       user: {
-        name: "Name",
-        surname: "Surname",
+        name: "Latestest",
+        surname: "Versionest",
       },
     };
   }
@@ -71,8 +71,8 @@ class Name extends Component {
   render() {
     return (
       <div
-        onMouseOver={this.handleMouseOver}
-        onMouseOut={this.handleMouseOut}
+        onMouseEnter={this.handleMouseOver}
+        onMouseLeave={this.handleMouseOut}
         className="container-name"
       >
         {this.state.isEditing ? (
@@ -96,8 +96,6 @@ class Name extends Component {
         )}
         {this.state.isHovering && (
           <SimpleEditingTools
-            onMouseOver={this.handleMouseOver}
-            onMouseOut={this.handleMouseOut}
             handleEdit={this.handleEditName}
             handleConfirm={this.handleConfirmName}
           />
