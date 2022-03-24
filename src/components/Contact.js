@@ -6,8 +6,8 @@ import SimpleEditingTools from "./simpleEditingTools";
 class Contact extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleEditInfo = this.handleEditInfo.bind(this);
     this.handleConfirmInfo = this.handleConfirmInfo.bind(this);
     this.handleChangeMail = this.handleChangeMail.bind(this);
@@ -25,13 +25,13 @@ class Contact extends Component {
     };
   }
 
-  handleMouseOver() {
+  handleMouseEnter() {
     this.setState(() => ({
       isHovering: true,
     }));
   }
 
-  handleMouseOut() {
+  handleMouseLeave() {
     this.setState(() => ({
       isHovering: false,
     }));
@@ -98,8 +98,8 @@ class Contact extends Component {
     return (
       <div className="container-contact">
         <div
-          onMouseOver={this.handleMouseOver}
-          onMouseOut={this.handleMouseOut}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
           className="contact-title"
         >
           <h3 className="contact-title-header">Contact Info</h3>

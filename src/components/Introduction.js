@@ -4,8 +4,8 @@ import SimpleEditingTools from "./simpleEditingTools";
 class Introduction extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleEditIntro = this.handleEditIntro.bind(this);
     this.handleConfirmIntro = this.handleConfirmIntro.bind(this);
     this.handleChangeMain = this.handleChangeMain.bind(this);
@@ -16,12 +16,12 @@ class Introduction extends Component {
     };
   }
 
-  handleMouseOver() {
+  handleMouseEnter() {
     this.setState(() => ({
       isHovering: true,
     }));
   }
-  handleMouseOut() {
+  handleMouseLeave() {
     this.setState(() => ({
       isHovering: false,
     }));
@@ -47,8 +47,8 @@ class Introduction extends Component {
     return (
       <div className="introduction-details">
         <div
-          onMouseOver={this.handleMouseOver}
-          onMouseOut={this.handleMouseOut}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
           className="introduction-title"
         >
           <h3 className="introduction-title-header">Introduction</h3>

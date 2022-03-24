@@ -7,8 +7,8 @@ import EditDegree from "./EditDegree";
 class Education extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleAddDegree = this.handleAddDegree.bind(this);
     this.handleEditDegree = this.handleEditDegree.bind(this);
     this.handleConfirmDegree = this.handleConfirmDegree.bind(this);
@@ -39,13 +39,13 @@ class Education extends Component {
     };
   }
 
-  handleMouseOver() {
+  handleMouseEnter() {
     this.setState(() => ({
       isHovering: true,
     }));
   }
 
-  handleMouseOut() {
+  handleMouseLeave() {
     this.setState(() => ({
       isHovering: false,
     }));
@@ -140,8 +140,8 @@ class Education extends Component {
     return (
       <div className="container-education">
         <div
-          onMouseOver={this.handleMouseOver}
-          onMouseOut={this.handleMouseOut}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
           className="education-title"
         >
           <h1 className="education-title-header">Education</h1>

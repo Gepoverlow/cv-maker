@@ -7,8 +7,8 @@ import EditWork from "./EditWork";
 class Experience extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleAddWork = this.handleAddWork.bind(this);
     this.handleEditWork = this.handleEditWork.bind(this);
     this.handleConfirmWork = this.handleConfirmWork.bind(this);
@@ -44,13 +44,13 @@ class Experience extends Component {
     };
   }
 
-  handleMouseOver() {
+  handleMouseEnter() {
     this.setState(() => ({
       isHovering: true,
     }));
   }
 
-  handleMouseOut() {
+  handleMouseLeave() {
     this.setState(() => ({
       isHovering: false,
     }));
@@ -164,8 +164,8 @@ class Experience extends Component {
     return (
       <div className="container-experience">
         <div
-          onMouseOver={this.handleMouseOver}
-          onMouseOut={this.handleMouseOut}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
           className="experience-title"
         >
           <h1 className="experience-title-header">Experience</h1>

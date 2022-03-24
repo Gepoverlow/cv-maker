@@ -5,8 +5,8 @@ class Name extends Component {
   constructor(props) {
     super(props);
 
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     this.handleEditName = this.handleEditName.bind(this);
     this.handleConfirmName = this.handleConfirmName.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
@@ -22,13 +22,13 @@ class Name extends Component {
     };
   }
 
-  handleMouseOver() {
+  handleMouseEnter() {
     this.setState(() => ({
       isHovering: true,
     }));
   }
 
-  handleMouseOut() {
+  handleMouseLeave() {
     this.setState(() => ({
       isHovering: false,
     }));
@@ -71,8 +71,8 @@ class Name extends Component {
   render() {
     return (
       <div
-        onMouseEnter={this.handleMouseOver}
-        onMouseLeave={this.handleMouseOut}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
         className="container-name"
       >
         {this.state.isEditing ? (
