@@ -15,7 +15,32 @@ class Experience extends Component {
     this.state = {
       isEditing: false,
       isHovering: false,
-      works: [],
+      works: [
+        {
+          company: "Company",
+          role: "Role",
+          dateFrom: "From",
+          dateTo: "To",
+          details: "Job Description",
+          id: uniqid(),
+        },
+        {
+          company: "Company",
+          role: "Role",
+          dateFrom: "From",
+          dateTo: "To",
+          details: "Job Description",
+          id: uniqid(),
+        },
+        {
+          company: "Company",
+          role: "Role",
+          dateFrom: "From",
+          dateTo: "To",
+          details: "Job Description",
+          id: uniqid(),
+        },
+      ],
     };
   }
 

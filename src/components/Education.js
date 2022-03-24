@@ -20,7 +20,22 @@ class Education extends Component {
     this.state = {
       isEditing: false,
       isHovering: false,
-      degrees: [],
+      degrees: [
+        {
+          date: "Date",
+          title: "Title",
+          specification: "Specification",
+          place: "Place Of Study",
+          id: uniqid(),
+        },
+        {
+          date: "Date",
+          title: "Title",
+          specification: "Specification",
+          place: "Place Of Study",
+          id: uniqid(),
+        },
+      ],
     };
   }
 
