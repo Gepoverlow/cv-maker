@@ -1,3 +1,5 @@
+Check out the live version at https://gepoverlow.github.io/cv-maker/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
